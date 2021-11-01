@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>DSP Presentation</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/sky.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>DSP Research Presentation</h1>
+			</section>
+			<section>
+			<section>
+				<h3>
+					The problem
+				</h3>
+				<img style="height:80vh" src="map.png" alt=""> <br>
+				<small>Snippet of the actual route from Lohit to Library</small>
+			</section>
+			<section>
+				<h3>
+					Representation
+				</h3>
+				<img style="height:50vh" src="route.png" alt=""> <br>
+				<small>Representative Route</small>
+			</section>
+			<section>
+				<h3>
+					Sensors 
+				</h3>
+				<img style="height:50vh" src="routeas.png" alt=""> <br>
+				<small>Sensor Locations</small>
+			</section>
+			<section>
+				<h3>
+					Measurement
+				</h3>
+				<img style="height:50vh" src="routewr.png" alt=""> <br>
+				<small>Measurement are noisy!</small>
+			</section>
+			<section>
+				<h3>Brief on Bayes Filter</h3>
+				<img src="gh_predict_update.png" alt="">
+			</section>
+			<section>
+				
+				<img src="gh_estimate3.png" alt="">
+			</section>
+		</section>
+			<section>
+				<h2>Why Particle Filters?</h2>
+				<section>
+					<h2>Applications</h2>
+					<ol>
+						<li> Localisations of Robots </li>
+						<li> Stock Trading </li>
+						<li> Tracking aircrafts and other locomotives (SDVs) </li>
+					</ol>
+				</section>
+				<section>
+					<h4>Why prefer this over the other filters?</h4>
+					
+					<ol>
+						<li class="fragment fade-in-then-semi-out">Multimodal - <i>Multi Objects</i> </li>
+						<li class="fragment fade-in-then-semi-out">Non Linear Behaviour - <i>No Linear Model Required!</i> </li>
+						<li class="fragment fade-in-then-semi-out">Unknown Process Model - <i>Knowing process model is good but not necessary</i> </li>
+						<li class="fragment fade-in-then-semi-out">Non Gaussian Noise - <i>Noise can be abrupt as well</i> </li>
+						<li class="fragment fade-in-then-semi-out">Continous - <i>Measurement Can be continous</i></li>
+						<li class="fragment fade-in-then-semi-out">Multivariate - <i>Many Properties can be tracked</i> </li>
+						<li class="fragment fade-in-then-semi-out">Occlusions - <i> Collisions can be accounted for</i></li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				
+				<section>
+					<h3>How Particle Filters work?</h3>
+					Steps Involved:
+					<ol>
+						<li class="fragment fade-in-then-semi-out">Generate Particles</li>
+						<li class="fragment fade-in-then-semi-out">Predict Next State of the Particles</li>
+						<li class="fragment fade-in-then-semi-out">Update Particles according to measurements</li>
+						<li class="fragment fade-in-then-semi-out">Resample Particles</li>
+						<li class="fragment fade-in-then-semi-out">Compute Estimate</li>
+					</ol>
+				</section>
+				<!-- <section>
+					<h2>Step 1: Generate Particles</h2>
+
+				</section>
+				<section>
+					<h2>Step 2: Predict Next State</h2>
+				</section>
+				<section>
+					<h2>Step 3: Update Particles according to measurements</h2>
+				</section>
+				<section>
+					<h2>Step 4: Compute Estimate</h2>
+					<h4>Different Metrics Possible, Depends on application.</h4>
+
+				</section>
+
+				<section>
+					<h2>Step 5: Resample Particles</h2>
+					<h4></h4>
+					<h4>Effective Resampling</h4>
+
+				</section> -->
+		
+			</section>
+
+			<section>
+				<section>
+					<h3>Simulations, Bottlenecks and Improvements</h3>
+					
+
+				
+			</section>
+			<section>
+				<h3>Simulation Results</h3>
+				<img   src="gifs/coil1.gif" alt="">
+				
+				
+				
+			</section>
+			<section>
+				<img  src="gifs/coil2.gif" alt="">
+			</section>
+			<section>
+				<img  src="gifs/robo_gaussian_1000p.gif" alt="">
+			</section>
+			<section>
+				<img src="gifs/robo_gaussian_1000p_halfinit.gif" alt="">
+
+			</section>
+			<section>
+				<h3>Bottlenecks and Improvements</h3>
+				<ul>
+					<li class="fragment fade-in-then-semi-out">Filter Degeneracy</li>
+					<li class="fragment fade-in-then-semi-out">Filter Divergence - Noise of the sensor</li>
+					<li class="fragment fade-in-then-semi-out">Computation Costs</li>
+					
+					
+				</ul>
+			</section>
+			<section>
+				Thanks!
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

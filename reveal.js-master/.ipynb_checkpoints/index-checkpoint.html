@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/sky.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>DSP Research Presentation</h1>
+			</section>
+			<section>
+				<h1>Bayes Filter</h1>
+			</section>
+			<section>
+				<h2>Why Particle Filters?</h2>
+				<section>
+					<h2>Applications</h2>
+					<ol>
+						<li> Localisations of Robots </li>
+						<li> Stock Trading </li>
+						<li> Tracking aircrafts and other locomotives (SDVs) </li>
+					</ol>
+				</section>
+				<section>
+					<h4>Why prefer this over the other filters?</h4>
+					<ol>
+						<li>Multimodal</li>
+						<li>Non Linear Behaviour</li>
+						<li>Non Linear Measurements</li>
+						<li>Unknown Process Model</li>
+						<li>Non Gaussian Noise</li>
+						<li>Continous</li>
+						<li>Multivariate</li>
+						<li>Occlusions</li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				
+				<section>
+					<h3>How Particle Filters work?</h3>
+					Steps Involved:
+					<ol>
+						<li>Generate Particles</li>
+						<li>Predict Next State of the Particles</li>
+						<li>Update Particles according to measurements</li>
+						<li>Resample Particles</li>
+						<li>Compute Estimate</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Step 1: Generate Particles</h2>
+
+				</section>
+				<section>
+					<h2>Step 2: Predict Next State</h2>
+				</section>
+				<section>
+					<h2>Step 3: Update Particles according to measurements</h2>
+				</section>
+				<section>
+					<h2>Step 4: Compute Estimate</h2>
+				</section>
+
+				<section>
+					<h2>Step 5: Resample Particles</h2>
+					<h4>Degeneracy</h4>
+
+				</section>
+		
+			</section>
+
+			<section>
+				<section>
+					<h1>Simulations</h1>
+
+				</section>
+				<section>
+					Sample Reimportance Sampling
+				</section>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+- Bayes Filters
+    - Example
+- Why particle filters?
+    - Tracking applications
+    - Track robot if you know their path
+    - Track stocks
+    - 
+- How Particle filters?
+    - Monte Carlo Methods
+        - Example
+    - Enumerate and Explain the Steps
+        - Go through each step with a graph/example
+    - Prior and Likelihood
+- How can we further improve them?
+    - Gaussian initial
+    - Increase particle count
+    - What if the distribution is not gaussian?
